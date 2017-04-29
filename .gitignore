@@ -2,11 +2,14 @@
 /infoAttore/.settings/
 /infoAttore/.classpath
 /infoAttore/.project
+/infoAttore/.mvn/wrapper
 /mainService/target/
 /mainService/.settings/
 /mainService/.classpath
 /mainService/.project
+/mainService/.mvn/wrapper
 /numeroFilm/target/
 /numeroFilm/.settings/
 /numeroFilm/.classpath
 /numeroFilm/.project
+/numeroFilm/.mvn/wrapper
