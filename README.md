@@ -1,7 +1,7 @@
 # progettoASW
 Primo progetto per il corso di Architetture di Sistemi Software
 
-###Istruzioni
+### Istruzioni
 
 Lanciare in tre terminali gli script presenti nella root. Ogni script va lanciato posizionandosi sulla cartella principale del relativo servizio:
 
@@ -14,7 +14,7 @@ Le possibili operazioni che si possono effettuare sono due:
 * /S/\<attore>/\<film> : restituisce informazioni (casuali) sull'\<attore> (numero di film in cui ha recitato) ed il personaggio (sempre casuale) interpretato in quel \<film> 
 * /S/\<attore> : restituisce informazioni (casuali) sull'\<attore> (numero di film in cui ha recitato) ed il film (casuale) per il quale è più famoso
 
-###Testing
+### Testing
 
 Per effettuare dei test realistici (e quindi con stampe non casuali) si possono utilizzare i seguenti valori:
 
