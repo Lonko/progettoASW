@@ -2,12 +2,12 @@ package asw.springboot.s;
 
 import java.util.Map;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-@Controller
+@RestController
 public class MainServiceController {
 
 	private String s1Uri = "http://localhost:8081/S1/";
@@ -21,10 +21,7 @@ public class MainServiceController {
 	public String getFilm(Map<String, Object> model, @PathVariable String attore) {
 		String film    = getString(this.s1Uri+attore);
 		int numeroFilm = getInt(this.s2Uri+attore);
-		model.put("attore", attore);
-		model.put("numeroFilm", numeroFilm);
-		model.put("film", film);
-		return "famoso";
+		return attore+" ha recitato in "+numeroFilm+" film ed il film per il quale è più famoso è "+film+".";
 	}
 
     /* Restituisce il numero di film in cui l'{attore}
@@ -34,11 +31,8 @@ public class MainServiceController {
     public String getPersonaggio(Map<String, Object> model, @PathVariable String attore, @PathVariable String film) {
 		String personaggio = getString(this.s1Uri+attore+"/"+film);
 		int numeroFilm = getInt(this.s2Uri+attore);
-		model.put("attore", attore);
-		model.put("film", film);
-		model.put("numeroFilm", numeroFilm);
-		model.put("personaggio", personaggio);
-		return "personaggio";
+		return attore+" ha recitato in "+numeroFilm+" film ed interpretato il ruolo di "
+				+personaggio+" in "+film+".";
     }	
 	
 	private int getInt(String uri){
