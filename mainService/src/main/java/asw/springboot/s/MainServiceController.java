@@ -2,6 +2,7 @@ package asw.springboot.s;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,8 +11,11 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class MainServiceController {
 
-	private String s1Uri = "http://localhost:8081/S1/";
-	private String s2Uri = "http://localhost:8082/S2/";
+	@Value("${service.s1.uri}") 
+	private String s1Uri;
+
+	@Value("${service.s2.uri}") 
+	private String s2Uri;
 	
     /* Restituisce il numero di film in cui 
      * l'{attore} ha recitato ed il film per il 
