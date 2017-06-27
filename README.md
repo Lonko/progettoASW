@@ -18,5 +18,5 @@ Le possibili operazioni che si possono effettuare sono due:
 
 Per effettuare dei test realistici (e quindi con stampe non casuali) si possono utilizzare i seguenti valori:
 
-* attore = "Johnny Depp" (ed eventualmente film = "Mortdecai")
+* attore = "Johnny Depp" (ed eventualmente film = "Pirati dei Caraibi")
 * attore = "Leonardo di Caprio" (ed eventualmente film = "Titanic")
